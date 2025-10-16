@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de CSR / Certificados</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; background: #f7f7f7; }
+        form { background: white; padding: 20px; border-radius: 12px; max-width: 500px; box-shadow: 0 0 8px #ccc; }
+        input, button { width: 100%; margin-top: 8px; padding: 10px; font-size: 14px; }
+        button { background-color: #0b5ed7; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #084298; }
+    </style>
+</head>
+<body>
+    <h2>Gerar CSR e Chave (.key)</h2>
+    <form action="/generate" method="post">
+        <input name="prefix" placeholder="Nome do certificado (ex: hml_b3_25_26)" required>
+        <input name="C" value="BR" placeholder="País (C)" required>
+        <input name="O" placeholder="Nome Empresarial (O)" required>
+        <input name="CN" placeholder="Endereço WEB (CN)" required>
+        <input name="ST" placeholder="Estado (ST)" required>
+        <input name="L" placeholder="Cidade (L)" required>
+        <input name="serialNumber" placeholder="CNPJ ou CPF" required>
+        <button type="submit">Gerar CSR</button>
+    </form>
+</body>
+</html>
