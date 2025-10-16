@@ -5,8 +5,8 @@ from fastapi.templating import Jinja2Templates
 import subprocess, os, tempfile, shutil, zipfile, datetime
 
 app = FastAPI()
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
-templates = Jinja2Templates(directory="app/templates")
+app.mount("/static", StaticFiles(directory="/app/static"), name="static")
+templates = Jinja2Templates(directory="/app/templates")
 
 OUTPUT_DIR = "/data/certs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
